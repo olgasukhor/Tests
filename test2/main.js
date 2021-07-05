@@ -6,11 +6,11 @@ const fetchGet = async () => {
     return result;    
 }
 
-// function CheckOdd (){
-//     return (result.id % 2) == 1;
-// } //хотела вынести фильтр в отдельную функцию, но тут завтык. так не работает.
+function CheckOdd (result){
+    return (result.id % 2) == 1;
+} 
 
-const getArray = result => result.filter(result => (result.id % 2) == 1);
+const getArray = result => result.filter(CheckOdd);
   
 const fetchOddPosts = () => {
     fetchGet().then(result => getArray(result))
