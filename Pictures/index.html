@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pictures</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
@@ -19,7 +21,7 @@
         </header>
         <section class="form">
             <form action="">
-                <input type="text" placeholder="Space"><button type="submit">Search</button>
+                <input type="text" placeholder="Space"><button type="submit" class="validateBtn">Search</button>
             </form>
         </section>
         <section class="results">
@@ -27,11 +29,12 @@
             <div class="pictures">
                 <img class="pictures-item" src="" alt="">
                 <img class="pictures-item" src="" alt="">
+                <div class="inner"></div>
             </div>
         </section>
     </div>
 
-    <script src="main.js"></script>
+    <script src="Dom.utils.js"></script>
 </body>
 
 </html>

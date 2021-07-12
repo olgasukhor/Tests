@@ -2,7 +2,7 @@
     width: 1200px;
     margin: 0 auto;
     background: #FFFFFF;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
 }
 h1{        
     font-size: 64px;
@@ -17,7 +17,7 @@ h1{
 input{
     outline:none;    
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 36px;
     line-height: 44px;
     color: #8F8F8F;
