@@ -1,0 +1,82 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 78px;
+}
+
+h2{      
+    margin-top: 78px;
+    margin-bottom: 38px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+}
+
+#pictures{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pictures img{
+    width: 222px;
+    /* height: 223px; */
+    background: url('image.png');
+    margin-right: 10px;
+    margin-bottom: 23px;
+}
+
+.form-container form {
+    display: flex;
+    height: 80px;
+}
+
+.form-container form input {
+    display: block;
+    flex: 1;
+    height: 100%;
+    padding: 15px 35px;
+    border: 1px solid #E7E7E7;
+
+    background: #FEFEFE;
+    border-radius: 50px 0px 0px 50px;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 44px;
+    color: #8F8F8F;
+
+    outline:none;
+}
+
+.form-container form button{
+    width: 223px;
+    height: 100%;
+    flex: none;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+    background: #E91E63;
+    border: none; outline: none;
+    border-radius: 0px 50px 50px 0px;
+    cursor: pointer;
+}
