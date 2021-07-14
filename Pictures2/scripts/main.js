@@ -9,17 +9,23 @@
 
         const innerPictureBlock = document.querySelector('#pictures');
 
+        const clean = () => {
+            innerPictureBlock.innerHTML = '';
+        };
+
         const createPictures = object => object.results.forEach((obj) => {
             innerPictureBlock.appendChild(
                 createImageElement(obj)
             );
         })
         if (validateField(value)) {
-            fetchPictures().then(results => {
+            fetchPictures(value).then(results => {
                 results.json()
                     .then(res => createPictures(res)
                     );
             })
+            clean();
         }
+
     });
 })();
