@@ -5,3 +5,7 @@ const createImageElement = (obj) => {
     image.src = obj.urls.regular;
     return div;
 }
+
+const clean = (element) => {
+    element.innerHTML = '';
+};
