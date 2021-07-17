@@ -33,12 +33,14 @@ form .form-title, .description, .push{
 }
 
 .todoItem{   
+    position: relative;
     width: 200px;
     min-height: 200px;
     margin: 15px;  
-    padding: 5px;     
+    padding: 5px;  
+    padding-top: 25px;   
 
-    box-sizing: content-box;
+    box-sizing: border-box;
     border: 1px solid grey;
     background-color: rgb(204, 241, 229); 
 
@@ -54,25 +56,35 @@ form .form-title, .description, .push{
 .out{
     width: 70%;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;        
 }
 
 .todoTitle{    
     font-weight: 600;
 }
 
-.todoText{
+.todoText{    
+    margin-top: 15px;
     font-weight: 400;
 }
-
+.like{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 23px;
+    cursor: pointer;
+}
 .deleteBtn{
-    float: right;
-
+    position: absolute;
+    top: 5px;
+    right: 28px;
     cursor: pointer;
 }
 
 .push{
     width: 20%;
     padding: 5px;
+    text-align: center;
     cursor: pointer;
 }
+
