@@ -31,7 +31,7 @@ const renderTodo = (todo) => {
     div.appendChild(p);
     const deleteBtn = document.createElement("button");
     deleteBtn.appendChild(createIcon());
-    const like = document.createElement("img");
+    const like = document.createElement("span");
     addClassToDo(div, h3, p, deleteBtn, like);
 
     div.appendChild(deleteBtn);

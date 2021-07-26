@@ -76,7 +76,8 @@
     height: 32px;
 
     background: url('images/like-48_45157.png') no-repeat;
-    border: 0;
+    border: none;
+    outline:none;     
     cursor: pointer;
 }
 .likeOnClick{    
@@ -87,7 +88,7 @@
     height: 32px;
 
     background: url('images/like_favorite_heart_3524.png') no-repeat;
-    border: 0;
+    border: none;
     cursor: pointer;
 }
 
