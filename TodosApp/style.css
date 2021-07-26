@@ -1,89 +1,110 @@
-/* .container{
+.container{
     width: 1400px;
     margin: 0 auto;
     background-color: rgb(201, 206, 206);
-} */
+}
 
 .head-title{
     padding: 15px;
     text-align: center;
 }
 
-/* #todo-form{
+#todo-form{
     display: flex;
     flex-direction: column;
     height: 380px;
-    margin: 10px;
+    margin: 15px;
 
     background-color: rgb(231, 248, 247);
     box-sizing: content-box;
-} */
+}
 
-/* .form-title, .description, .push{
-    display: flex;
-    margin: 10px;   
-
+.form-title, .description, .push{
+    margin: 10px; 
     font-size: 1.2rem;      
 }
-.form-title{
-    flex: 1;    
+
+.form-title{    
+    display: block;
+    flex: 1;   
 }
+
 .description{
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 .main{
     display: flex;    
-    justify-content: space-between;
-} */
-/* .todoItem{   
+    justify-content: space-around;
+}
+.todoItem{   
     position: relative;
-    width: 200px;
+    width: 250px;
     min-height: 200px;
-    margin: 15px;  
-    padding: 5px;  
-    padding-top: 25px;   
-
+    margin: 0 15px 15px 15px;  
+    padding: 15px;  
+   
     box-sizing: border-box;
     border: 1px solid grey;
     background-color: rgb(204, 241, 229); 
 
     font-size: 1.2rem;
     word-wrap: break-word;
-}*/
+}
 
-
-/*
-.out{
-    width: 70%;
+#todos{  
     display: flex;
     flex-wrap: wrap;        
 }
 
 .todoTitle{    
-    font-weight: 600;
+    font-weight: 600;    
 }
 
 .todoText{    
     margin-top: 15px;
     font-weight: 400;
+    font-style: italic;
 }
+
 .like{
+    background: url('images/like-48_45157.png') no-repeat;
     position: absolute;
-    top: 5px;
+    top: 1px;
     right: 5px;
     width: 23px;
+    width: 32px;
+    height: 32px;
+    border: 0;
     cursor: pointer;
 }
-.deleteBtn{
+.likeOnClick{
+    background: url('images/like_favorite_heart_3524.png') no-repeat;
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    width: 23px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    cursor: pointer;
+}
+
+.todo-trash{
     position: absolute;
     top: 5px;
     right: 28px;
     cursor: pointer;
-} */
+    background: url('images/pngegg.png') no-repeat;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    
+    
+}
 
 .push{
-    width: 20%;
+    width: 30%;
     padding: 5px;
-    text-align: center;
+    text-align: center;   
     cursor: pointer;
 }

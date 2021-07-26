@@ -15,7 +15,9 @@
             list.appendChild(
                 renderTodo(todo)
             );
+
         })
+
     });
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -44,5 +46,7 @@
                 ...getState()
             ])
         });
+        title.value = '';
+        content.value = '';
     });
 })();
