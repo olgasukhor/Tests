@@ -26,7 +26,9 @@
 
 .form-title{    
     display: block;
-    flex: 1;   
+    flex: 1;
+    width: 90%;
+      
 }
 
 .description{
@@ -66,25 +68,25 @@
     font-style: italic;
 }
 
-.like{
-    background: url('images/like-48_45157.png') no-repeat;
+.like{    
     position: absolute;
     top: 1px;
-    right: 5px;
-    width: 23px;
-    width: 32px;
+    right: 5px;    
+    width: 33px;
     height: 32px;
+
+    background: url('images/like-48_45157.png') no-repeat;
     border: 0;
     cursor: pointer;
 }
-.likeOnClick{
-    background: url('images/like_favorite_heart_3524.png') no-repeat;
+.likeOnClick{    
     position: absolute;
     top: 1px;
-    right: 5px;
-    width: 23px;
-    width: 32px;
+    right: 5px;    
+    width: 33px;
     height: 32px;
+
+    background: url('images/like_favorite_heart_3524.png') no-repeat;
     border: 0;
     cursor: pointer;
 }
