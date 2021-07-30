@@ -81,7 +81,7 @@ function App() {
               index={index}
               todo={todo}
               // text={todo.title}
-              // body={todo.body}
+              
               completeTodo={completeTodo}
               removeTodo={removeTodo}
             />
