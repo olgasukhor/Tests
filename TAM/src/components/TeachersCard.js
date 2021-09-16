@@ -12,32 +12,12 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 350,
         margin: '20px auto',
     },
-    bullet: {
-        display: 'flex',
-        justifyContent: 'center',
-        margin: '0 auto',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
-    },
+
     media: {
         height: 500,
         paddingTop: 25
     },
-    expand: {
-        transform: 'rotate(0deg)',
-        marginLeft: 'auto',
-        transition: theme.transitions.create('transform', {
-            duration: theme.transitions.duration.shortest,
-        }),
-    },
-    expandOpen: {
-        transform: 'rotate(180deg)',
-    },
+
 }));
 
 
@@ -56,7 +36,7 @@ export default function TeachersCard(props) {
                     className={classes.media}
                     title="as"
                 />
-                <Typography variant="h5" component="h2">
+                <Typography variant="h5" component="h2" style={{ textAlign: 'center' }}>
                     {props.name}
                 </Typography>
                 <Typography component="h3" color="textSecondary" gutterBottom>
@@ -75,7 +55,7 @@ export default function TeachersCard(props) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button target="_blank" href={props.page} size="small" >Learn More</Button>
+                <Button target="_blank" rel="noreferrer" href={props.page} size="small" >Learn More</Button>
             </CardActions>
 
         </Card>
