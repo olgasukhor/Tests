@@ -3,15 +3,6 @@ import TeachersCard from '../components/TeachersCard';
 import { makeStyles } from '@material-ui/core/styles';
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
-    media: {
-        height: 200,
-        width: '100%',
-        marginBottom: 20
-    },
-    toolbar: theme.mixins.toolbar,
-    drawerPaper: {
-        width: drawerWidth,
-    },
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
@@ -23,9 +14,6 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: drawerWidth,
         },
         textAlign: 'justify',
-    },
-    text: {
-        fontSize: 16,
     },
 
 }));

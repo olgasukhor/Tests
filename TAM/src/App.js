@@ -1,10 +1,10 @@
 import './App.css';
 import React from "react";
-import ResponsiveDrawer from './NavigationUI'
+import ResponsiveDrawer from './views/NavigationUI'
 import { BrowserRouter } from "react-router-dom";
-import RouterPages from './RouterPages'
+import RouterPages from './components/RouterPages'
 import Footer from './views/Footer';
-import Partners from './Partners';
+import Partners from './components/Partners';
 
 
 function App() {

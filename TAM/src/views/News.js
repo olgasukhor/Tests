@@ -16,10 +16,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         marginBottom: 20
     },
-    media: {
-        height: 300,
-        width: 190
-    },
+
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
         width: drawerWidth,
@@ -37,10 +34,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: 275,
         marginBottom: 20,
-    },
-
-    title: {
-        fontSize: 14,
     },
     pos: {
         marginBottom: 12,
