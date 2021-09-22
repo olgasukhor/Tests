@@ -7,3 +7,9 @@
 .App-inner{
     display: flex;
 }
+a{
+    color: #026E89
+}
+a:hover{
+    color:#539fbb;
+}

@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 18,
     },
     header: {
-        backgroundColor: 'rgb(143, 181, 250)',
+        backgroundColor: '#B5D3DE',
     },
     margin: {
         margin: theme.spacing(1),
@@ -49,10 +49,10 @@ function StudyProcess() {
     })
 
     const lessonsList = lessons.map(item => {
-        return <li key={item.id}><a target="_blank" rel="noreferrer" href={item.href1}>{item.title}</a> <a target="_blank" href={item.href2}>{item.Dform}</a><a target="_blank" href={item.href3}>{item.Zform}</a></li>
+        return <li key={item.id}><a target="_blank" rel="noreferrer" href={item.href1}>{item.title}</a> <a target="_blank" rel="noreferrer" href={item.href2}>{item.Dform}</a><a target="_blank" rel="noreferrer" href={item.href3}>{item.Zform}</a></li>
     })
     const lessonsListM = lessonsMagistr.map(item => {
-        return <li key={item.id}><a target="_blank" rel="noreferrer" href={item.href1}>{item.title}</a> <a target="_blank" href={item.href2}>{item.Dform}</a><a target="_blank" href={item.href3}>{item.Zform}</a></li>
+        return <li key={item.id}><a target="_blank" rel="noreferrer" href={item.href1}>{item.title}</a> <a target="_blank" rel="noreferrer" href={item.href2}>{item.Dform}</a><a target="_blank" rel="noreferrer" href={item.href3}>{item.Zform}</a></li>
     })
     return (
         <main className={classes.content}>

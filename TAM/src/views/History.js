@@ -40,7 +40,7 @@ function History() {
                 className={classes.header}
                 component="img"
                 alt=""
-                image="https://images.unsplash.com/photo-1496247749665-49cf5b1022e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80"
+                image="https://images.unsplash.com/photo-1581092335397-9583eb92d232?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
                 title=""
             />
             <div className="text">

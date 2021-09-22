@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'justify',
     },
     header: {
-        backgroundColor: 'rgb(143, 181, 250)',
+        backgroundColor: '#B5D3DE',
     },
 
 }));

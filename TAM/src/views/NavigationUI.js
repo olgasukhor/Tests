@@ -25,7 +25,8 @@ import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
-import logo from '../img/logo.jpg'
+import logo from '../img/logo.jpg';
+
 
 
 
@@ -63,17 +64,19 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   drawer: {
+    zIndex: 1,
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
       flexShrink: 0,
     },
   },
   appBar: {
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
+    backgroundColor: '#026E89',
+    // [theme.breakpoints.up('sm')]: {
+    //   width: `calc(100% - ${drawerWidth}px)`,
+    //   marginLeft: drawerWidth,
 
-    },
+    // },
   },
   menuButton: {
     marginRight: theme.spacing(1),
@@ -83,8 +86,10 @@ const useStyles = makeStyles((theme) => ({
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
+
   drawerPaper: {
     width: drawerWidth,
+
   },
   content: {
     flexGrow: 1,
@@ -112,8 +117,9 @@ function ResponsiveDrawer(props) {
     <div>
 
       <div className={classes.toolbar} />
-      <Divider />
-      <List>
+      {/* <Divider /> */}
+      <List style={{ marginTop: "30px" }}>
+
         <ListItem button component={Link} to="/about" key='Головна'>
           <ListItemIcon><AccountBalanceIcon /></ListItemIcon>
           <ListItemText primary='Головна' />
@@ -131,9 +137,6 @@ function ResponsiveDrawer(props) {
           <ListItemText primary='Наука' />
         </ListItem>
 
-      </List>
-      <Divider />
-      <List>
         <ListItem button component={Link} to="/study" key='Навчальний процес'>
           <ListItemIcon><BusinessCenterIcon /></ListItemIcon>
           <ListItemText primary='Навчальний процес' />
@@ -146,6 +149,8 @@ function ResponsiveDrawer(props) {
           <ListItemIcon><LocalLibraryIcon /></ListItemIcon>
           <ListItemText primary='Для абітурієнта' />
         </ListItem>
+        <Divider />
+        <LoginDialog />
 
       </List>
 
@@ -179,11 +184,12 @@ function ResponsiveDrawer(props) {
             Кафедра технології та автоматизації машинобудування
           </Typography>
 
-          <LoginDialog />
+
 
         </Toolbar>
 
       </AppBar>
+
 
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}

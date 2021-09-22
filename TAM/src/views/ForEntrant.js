@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import Card from '@material-ui/core/Card';
 import Box from '@material-ui/core/Box';
 import CardContent from '@material-ui/core/CardContent';
-import FB from '../img/FB (1).jpg'
+
 import photo from '../img/Foto Kozlov_1.jpg'
 import photo1 from '../img/105_2.jpg'
 import photo2 from '../img/105_3 (1).jpg'
@@ -31,11 +31,12 @@ const YoutubeEmbed = ({ embedId }) => (
 YoutubeEmbed.propTypes = {
     embedId: PropTypes.string.isRequired
 };
+
 const useStyles = makeStyles((theme) => ({
     media: {
         height: 200,
         width: '100%',
-        margin: '20px 0',
+        margin: 0,
     },
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
@@ -43,9 +44,9 @@ const useStyles = makeStyles((theme) => ({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing(1),
+        padding: theme.spacing(3),
         marginLeft: 0,
-        marginRight: theme.spacing(1),
+        marginRight: theme.spacing(2),
         [theme.breakpoints.up('sm')]: {
             marginLeft: drawerWidth,
         },
@@ -126,11 +127,7 @@ const ForEntrant = () => {
                     <YoutubeEmbed embedId="Muo52A7zpE8" />
                 </div>
             </div>
-            <div className={classes.root}>
-                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/Прикладна-механіка-436645816708119">
-                    <img src={FB} alt="" />
-                </a>
-            </div>
+
             <Typography paragraph>
                 Випусковою для зазначених спеціальностей та напрямку є кафедра “Технологій та автоматизації машинобудування”, яка забезпечує підготовку бакалаврів, спеціалістів, магістрів та докторів філософії (PhD) денної та заочної форм навчання. З 2016 р. кафедру очолює д. т. н., професор Козлов Л.Г.
             </Typography>

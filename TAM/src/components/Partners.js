@@ -4,16 +4,12 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import ListItem from '@material-ui/core/ListItem';
-import { Link } from 'react-router-dom';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import VNTU from '../img/VNTU.jpg';
 import IMT from '../img/IMT.jpg';
+import FB from '../img/FB (1).jpg'
 
 const useStyles = makeStyles((theme) => ({
-    grid: {
+    block: {
         direction: "column",
         justifyContent: "flex-end",
         alignItems: "flex-start",
@@ -45,7 +41,7 @@ const Partners = () => {
         <div >
             <div className={classes.toolbar} />
 
-            <Grid container className={classes.grid}>
+            <Grid container className={classes.block}>
                 <Card className={classes.root}>
                     <CardContent>
                         <Typography variant='h6'>
@@ -77,12 +73,11 @@ const Partners = () => {
 
                 </Card>
                 <Card className={classes.root}>
-                    <CardContent>
-                        <ListItem button component={Link} to="/forEntrant" key='для абітурієнта'>
-                            <ListItemIcon><LocalLibraryIcon /></ListItemIcon>
-                            <ListItemText primary='Інформація для абітурієнта' />
-                        </ListItem>
-                    </CardContent>
+                    <div className={classes.root}>
+                        <a target="_blank" rel="noreferrer" href="https://www.facebook.com/Прикладна-механіка-436645816708119">
+                            <img src={FB} alt="" />
+                        </a>
+                    </div>
                 </Card>
             </Grid>
         </div>
