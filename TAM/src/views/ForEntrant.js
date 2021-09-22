@@ -21,7 +21,7 @@ const YoutubeEmbed = ({ embedId }) => (
             height="255"
             src={`https://www.youtube.com/embed/${embedId}`}
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="Embedded youtube"
         />
@@ -105,7 +105,7 @@ const ForEntrant = () => {
                     </Typography>
 
                     <Typography variant='h5'>
-                        а також подальшого продовження навчання для отриманняступеня вищої  освіти "магістр"
+                        а також подальшого продовження навчання для отримання ступеня вищої  освіти "магістр"
                     </Typography>
                     <Typography variant='h6'>
                         <a target="_blank" rel="noreferrer" href="http://tam.vntu.edu.ua/images/FMT_PM_2020_2.pdf">Інформація для абітурієнта</a>
@@ -125,9 +125,12 @@ const ForEntrant = () => {
                 </div>
                 <div className={classes.videoCard}>
                     <YoutubeEmbed embedId="Muo52A7zpE8" />
-                </div>
-            </div>
 
+                    {/* <div class="youtube-video"><iframe src="//www.youtube.com/embed/Muo52A7zpE8?rel=0&amp;wmode=opaque" width="453" height="255" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div> */}
+
+                </div>
+
+            </div>
             <Typography paragraph>
                 Випусковою для зазначених спеціальностей та напрямку є кафедра “Технологій та автоматизації машинобудування”, яка забезпечує підготовку бакалаврів, спеціалістів, магістрів та докторів філософії (PhD) денної та заочної форм навчання. З 2016 р. кафедру очолює д. т. н., професор Козлов Л.Г.
             </Typography>
