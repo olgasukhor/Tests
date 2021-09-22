@@ -54,7 +54,11 @@ function FormDialog() {
     };
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data) => {
+        // setEmail(data.Email)
+        // console.log(data)
+        console.log(data.Email, data.Password);
+    }
     // console.log(errors);
     // const clearErrors = () => {
     //     setEmailError('');
@@ -80,7 +84,7 @@ function FormDialog() {
     // }
 
     const handleSignup = () => {
-        //     clearErrors();
+        //     clearErrors();        
         firebase
             .auth()
             .createUserWithEmailAndPassword(email, password)
@@ -130,13 +134,22 @@ function FormDialog() {
                         Авторизуйтесь для входу в систему
                     </DialogContentText>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input type="text" placeholder="Name" {...register("First name", { required: true, maxLength: 80 })} />
+                        <input type="text" placeholder="Name" {...register("Name", { required: true, maxLength: 80 })} />
 
-                        <input value={email} type="text" placeholder="Email" onChange={(e) => setEmail(e.target.value)}
-                        //  {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} 
+                        <input
+
+                            type="text"
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        // {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
                         />
-                        <input value={password} type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}
-                        // {...register("Password", { required: true, minLength: 4, maxLength: 25, })} 
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        // {...register("Password", { required: true, minLength: 4, maxLength: 25, })}
                         />
 
                         <input type="submit" value="Зареєструватися"
