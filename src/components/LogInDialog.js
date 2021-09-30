@@ -15,13 +15,6 @@
 //     // const [passwordError, setPasswordError] = useState("");
 //     // const [hasAccount, setHasAccount] = useState(false)
 
-//     const handleClickOpen = () => {
-//         setOpen(true);
-//     };
-
-//     const handleClose = () => {
-//         setOpen(false);
-//     };
 
 //     const { register, handleSubmit, formState: { errors } } = useForm();
 //     const onSubmit = (data) => {
