@@ -34,9 +34,11 @@ const useStyles = makeStyles((theme) => ({
     root: {
         minWidth: 275,
         marginBottom: 20,
+        textAlign: 'center',
     },
     pos: {
         marginBottom: 12,
+
     },
 }));
 function News() {
@@ -57,6 +59,36 @@ function News() {
                 <Card className={classes.root}>
                     <CardContent>
                         <Typography variant="h5" component="h2">
+                            День машинобудівника!
+                        </Typography>
+                        <Typography paragraph>
+                            26.09.2021
+                        </Typography>
+                        <Typography paragraph>
+                            Колектив Факультету машинобудування і транспорту вітає вас з професійним святом – Днем машинобудівника! Машинобудування є ключовою галуззю і основою промислового потенціалу України. Від ефективності нашої роботи, впровадження інноваційної продукції, підвищення її конкурентоспроможності багато в чому залежить динаміка економічного зростання країни та добробут її громадян. Сьогодні наше спільне свято! Бажаємо вам професійних успіхів, нових розробок, творчого натхнення та жіттєвої енергії!
+                        </Typography>
+                    </CardContent>
+                </Card>
+
+                <Card className={classes.root}>
+                    <CardContent>
+                        <Typography variant="h5" component="h2">
+                            Зміни в організації освітнього процесу з 23.09.2021 р.
+                        </Typography>
+                        <Typography paragraph>
+                            22.09.2021
+                        </Typography>
+                        <Typography paragraph>
+
+                            До уваги студентів ФМТ всіх курсів, денної та заочної форм навчання! У зв’язку із рішенням Державної комісії з питань техногенно-екологічної безпеки та надзвичайних ситуацій щодо переходу України в “жовту” зону з 23 вересня відбулись зміни в організації освітнього процесу. Всі заняття здобувачів денної та заочної форм навчання відбувається згідно розкладу в дистанційному режимі (on-line). Робота деканату проходить у штатному режимі, але із дотриманням вимог дії карантину. Просимо дотримуватись необхідних заходів безпеки та індивідуального захисту під час відвідування деканату. З метою полегшення вирішення питань, які можуть бути вирішені у дистанційному режимі, просимо скористатися контактним телефоном деканату (в тому числі Viber, Telegram чи WhatsApp) або електронною поштою.
+
+                        </Typography>
+                    </CardContent>
+                </Card>
+
+                <Card className={classes.root}>
+                    <CardContent>
+                        <Typography variant="h5" component="h2">
                             ІІ тур Всеукраїнського конкурсу студентських робіт із напрямку
 
                         </Typography>
@@ -64,7 +96,7 @@ function News() {
                             «Прикладна механіка (Механотроніка)»
                         </Typography>
                     </CardContent>
-                    <CardActions>
+                    <CardActions style={{ justifyContent: 'center' }}>
                         <Button variant="contained" size="small" className={classes.pos} target="_blank" rel="noreferrer" href="http://tam.vntu.edu.ua/images/Results.pdf">
                             Результати
                         </Button>

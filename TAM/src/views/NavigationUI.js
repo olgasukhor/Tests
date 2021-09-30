@@ -97,10 +97,18 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     marginRight: 10,
+
   },
   logo: {
     display: 'flex',
+  },
+  headerName: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+    },
   }
+
 }));
 
 function ResponsiveDrawer(props) {
@@ -150,7 +158,7 @@ function ResponsiveDrawer(props) {
           <ListItemText primary='Для абітурієнта' />
         </ListItem>
         <Divider />
-        <LoginDialog />
+
 
       </List>
 
@@ -170,22 +178,27 @@ function ResponsiveDrawer(props) {
             justifyContent: 'space-between',
           }}
         >
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap className={classes.logo}>
-            <Avatar alt="" src={logo} className={classes.avatar} />
-            Кафедра технології та автоматизації машинобудування
-          </Typography>
+          <div className="left" style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
+            >
+              <MenuIcon />
+            </IconButton>
 
+            <Typography variant="h6" noWrap className={classes.logo}>
+              <Avatar alt="" src={logo} className={classes.avatar} />
+              <div className={classes.headerName}>Кафедра технології та автоматизації машинобудування</div>
+            </Typography>
+          </div>
 
-
+          <LoginDialog />
         </Toolbar>
 
       </AppBar>
