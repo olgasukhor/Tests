@@ -1,17 +1,3 @@
-// import React, { useEffect, useState, useContext } from 'react';
-// import Button from '@material-ui/core/Button';
-// import Dialog from '@material-ui/core/Dialog';
-// import DialogContent from '@material-ui/core/DialogContent';
-// import DialogContentText from '@material-ui/core/DialogContentText';
-// import DialogTitle from '@material-ui/core/DialogTitle';
-// import { useForm } from "react-hook-form";
-// import { makeStyles, useTheme } from '@material-ui/core/styles';
-// import './logIn/logIn.css'
-// import fire from './fireBase';
-// import { Context } from "../index";
-// import firebase from 'firebase';
-
-
 // const useStyles = makeStyles((theme) => ({
 //     btn: {
 //         display: 'block',
