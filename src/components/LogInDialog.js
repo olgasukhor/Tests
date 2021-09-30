@@ -6,7 +6,7 @@
 //     const { firebase } = useContext(Context)
 
 //     // const [hasAccount, setHasAccount] = useState(false)
-
+//new commit
 
 //     const { register, handleSubmit, formState: { errors } } = useForm();
 //     const onSubmit = (data) => {
