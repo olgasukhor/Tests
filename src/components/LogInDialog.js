@@ -5,11 +5,6 @@
 //     const { auth } = useContext(Context);
 //     const { firebase } = useContext(Context)
 
-
-
-
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
 //     // const [emailError, setEmailError] = useState("");
 //     // const [passwordError, setPasswordError] = useState("");
 //     // const [hasAccount, setHasAccount] = useState(false)
