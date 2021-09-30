@@ -5,8 +5,7 @@
 //     const { auth } = useContext(Context);
 //     const { firebase } = useContext(Context)
 
-//     // console.log(auth)
-//     // console.log(firebase)
+
 
 
 //     const [email, setEmail] = useState("");
