@@ -1,19 +1,27 @@
 import './App.css';
-import React from "react";
+import React, { useEffect } from "react";
 import ResponsiveDrawer from './views/NavigationUI'
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import RouterPages from './components/RouterPages'
 import Footer from './views/Footer';
 import Partners from './components/Partners';
-// import MiniDrawer from './views/nav';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <div className="App">
       <div className="App-header">
-        {/* <MiniDrawer /> */}
         <BrowserRouter>
+          <ScrollToTop />
           <ResponsiveDrawer />
           <div className="App-inner">
             <RouterPages />
@@ -27,3 +35,9 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
