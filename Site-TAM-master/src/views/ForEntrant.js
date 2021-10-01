@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { CardMedia } from "@material-ui/core";
 import Typography from '@material-ui/core/Typography';
@@ -9,7 +9,9 @@ import CardContent from '@material-ui/core/CardContent';
 
 import photo from '../img/Foto Kozlov_1.jpg'
 import photo1 from '../img/105_2.jpg'
-import photo2 from '../img/105_3 (1).jpg'
+import photo2 from '../img/105_3 (1).jpg';
+import Loader from "../components/Loader/Loader";
+
 
 
 const drawerWidth = 240;
@@ -67,6 +69,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 const ForEntrant = () => {
     const classes = useStyles();
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 1500)
+    })
 
     return (
         <div className={classes.content}>
@@ -80,7 +88,7 @@ const ForEntrant = () => {
                 image="https://images.unsplash.com/photo-1501959181532-7d2a3c064642?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80v"
                 title=""
             />
-            {/* <div> */}
+
             <Card className={classes.root}>
                 <CardContent>
                     <Typography variant='h5'>
@@ -113,24 +121,24 @@ const ForEntrant = () => {
 
                 </CardContent>
             </Card>
-            <div className={classes.video}>
-                <div className={classes.videoCard}>
-                    <YoutubeEmbed embedId="qlA5IFe9HHA" />
+            {isLoading === true ?
+                <div style={{ display: "flex", justifyContent: 'center' }}><Loader /> </div>
+                :
+                <div className={classes.video}>
+                    <div className={classes.videoCard}>
+                        <YoutubeEmbed embedId="qlA5IFe9HHA" />
+                    </div>
+                    <div className={classes.videoCard}>
+                        <YoutubeEmbed embedId="1nEhpG0_vLU" />
+                    </div>
+                    <div className={classes.videoCard}>
+                        <YoutubeEmbed embedId="TO89hRvw0w8" />
+                    </div>
+                    <div className={classes.videoCard}>
+                        <YoutubeEmbed embedId="Muo52A7zpE8" />
+                    </div>
                 </div>
-                <div className={classes.videoCard}>
-                    <YoutubeEmbed embedId="1nEhpG0_vLU" />
-                </div>
-                <div className={classes.videoCard}>
-                    <YoutubeEmbed embedId="TO89hRvw0w8" />
-                </div>
-                <div className={classes.videoCard}>
-                    <YoutubeEmbed embedId="Muo52A7zpE8" />
-
-                    {/* <div class="youtube-video"><iframe src="//www.youtube.com/embed/Muo52A7zpE8?rel=0&amp;wmode=opaque" width="453" height="255" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div> */}
-
-                </div>
-
-            </div>
+            }
             <Typography paragraph>
                 Випусковою для зазначених спеціальностей та напрямку є кафедра “Технологій та автоматизації машинобудування”, яка забезпечує підготовку бакалаврів, спеціалістів, магістрів та докторів філософії (PhD) денної та заочної форм навчання. З 2016 р. кафедру очолює д. т. н., професор Козлов Л.Г.
             </Typography>
