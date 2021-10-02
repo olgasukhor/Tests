@@ -4,7 +4,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
-// const drawerWidth = 240;
+
 const useStyles = makeStyles((theme) => ({
     content: {
         zIndex: 2,
@@ -20,9 +20,7 @@ const useStyles = makeStyles((theme) => ({
         left: 0,
         flexGrow: 1,
         marginLeft: 0,
-        // [theme.breakpoints.up('sm')]: {
-        //     marginLeft: drawerWidth,
-        // },
+
     },
 
 }));
@@ -42,11 +40,8 @@ export default function StickyFooter() {
         <div className={classes.content}>
             <Box>
                 <CssBaseline />
-
                 <Box>
-                    <Container
-                    // maxWidth="sm"
-                    >
+                    <Container>
                         <Typography variant="body1">
                             Кафедра ТАМ.
                         </Typography>

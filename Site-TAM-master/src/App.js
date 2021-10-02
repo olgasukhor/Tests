@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect } from "react";
-import ResponsiveDrawer from './views/NavigationUI'
+import NavigationUI from './views/NavigationUI'
 import { BrowserRouter, useLocation } from "react-router-dom";
 import RouterPages from './components/RouterPages'
 import Footer from './views/Footer';
@@ -22,7 +22,7 @@ function App() {
       <div className="App-header">
         <BrowserRouter>
           <ScrollToTop />
-          <ResponsiveDrawer />
+          <NavigationUI />
           <div className="App-inner">
             <RouterPages />
             < Partners />

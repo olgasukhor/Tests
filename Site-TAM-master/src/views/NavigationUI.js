@@ -15,7 +15,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import PersonIcon from '@material-ui/icons/Person';
-import LoginDialog from '../components/LogInDialog';
+import LoginDialog from '../components/logIn/LogInDialog';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
 import DomainIcon from '@material-ui/icons/Domain';
@@ -72,11 +72,6 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     backgroundColor: '#026E89',
-    // [theme.breakpoints.up('sm')]: {
-    //   width: `calc(100% - ${drawerWidth}px)`,
-    //   marginLeft: drawerWidth,
-
-    // },
   },
   menuButton: {
     marginRight: theme.spacing(1),
@@ -84,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
-  // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
 
   drawerPaper: {
@@ -111,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-function ResponsiveDrawer(props) {
+function NavigationUI(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -125,7 +119,7 @@ function ResponsiveDrawer(props) {
     <div>
 
       <div className={classes.toolbar} />
-      {/* <Divider /> */}
+
       <List style={{ marginTop: "30px" }}>
 
         <ListItem button component={Link} to="/about" key='Головна'>
@@ -205,7 +199,7 @@ function ResponsiveDrawer(props) {
 
 
       <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+
         <Hidden smUp implementation="css">
           <Drawer
             container={container}
@@ -217,7 +211,7 @@ function ResponsiveDrawer(props) {
               paper: classes.drawerPaper,
             }}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true,
             }}
           >
             {drawer}
@@ -240,12 +234,8 @@ function ResponsiveDrawer(props) {
   );
 }
 
-ResponsiveDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+NavigationUI.propTypes = {
   window: PropTypes.func,
 };
 
-export default ResponsiveDrawer;
+export default NavigationUI;
