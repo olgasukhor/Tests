@@ -104,7 +104,7 @@ function SignUp() {
                                 control={control}
                                 name={'email'}
                                 render={
-                                    ({ field }) => <TextField style={{ marginBottom: "10px" }} {...field} />
+                                    ({ field }) => <TextField placeholder="Ваш email" style={{ marginBottom: "10px" }} {...field} />
                                 }
                             />
 
@@ -114,7 +114,7 @@ function SignUp() {
                                 control={control}
                                 name={'password'}
                                 render={
-                                    ({ field }) => <TextField type={'password'} {...field} />
+                                    ({ field }) => <TextField placeholder="Ваш пароль" type={'password'} {...field} />
                                 }
                             />
 

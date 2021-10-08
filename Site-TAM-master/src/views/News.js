@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { CardMedia } from "@material-ui/core";
@@ -7,6 +7,8 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import AddNews from "../components/AddNew";
+import NewsList from "../components/NewsList";
 
 
 const drawerWidth = 240;
@@ -43,6 +45,34 @@ const useStyles = makeStyles((theme) => ({
 }));
 function News() {
     const classes = useStyles();
+    const [tasks, setTasks] = useState([])
+    const [showAddTask, setShowAddTask] = useState(false)
+
+    useEffect(() => {
+        const getTasks = async () => {
+            const tasksFromServer = await fetchTasks()
+            setTasks(tasksFromServer)
+        }
+        getTasks()
+    }, [])
+
+    const fetchTasks = async () => {
+        const res = await fetch('http://localhost:5000/tasks')
+        const data = await res.json()
+        return (data)
+    }
+    const addTask = async (task) => {
+        const res = await fetch('http://localhost:5000/tasks', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(task)
+        })
+        const data = await res.json()
+
+        setTasks([...tasks, data])
+    }
 
     return (
         <main className={classes.content}>
@@ -56,6 +86,21 @@ function News() {
                 title=""
             />
             <div className="text">
+                {/* {user && (<div><Button variant="contained" size="small" className={classes.pos}>Додати новину</Button>
+                    <AddNews onAdd={addTask} /></div>
+                )} */}
+                <Button
+                    // color={showAddTask ? 'green' : 'black'}
+                    onClick={() => setShowAddTask(!showAddTask)}
+                    variant="contained"
+                    size="small"
+                    className={classes.pos}
+                >
+                    {showAddTask ? 'Скрити' : 'Додати новину'}
+                </Button>
+                {showAddTask && <AddNews onAdd={addTask} />}
+
+                <NewsList tasks={tasks} />
                 <Card className={classes.root}>
                     <CardContent>
                         <Typography variant="h5" component="h2">
